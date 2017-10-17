@@ -14,19 +14,18 @@ export interface Package {
     devDependencies: Dictionary<string>
 }
 
-const DEFAULT_PATH = path.join(__dirname, '../../../');
+const DEFAULT_PATH = path.join(__dirname, '..', '..', '..', 'package.json');
 
 export class Reader {
 
     private package: Package;
 
     constructor(private filePath?: string) {
-        this.filePath = path.join(filePath || DEFAULT_PATH, 'package.json');
-        this.package = JSON.parse(fs.readFileSync(this.filePath).toString());
+        this.package = JSON.parse(fs.readFileSync(filePath || DEFAULT_PATH).toString());
     }
 
     getPackageStream() {
-        return fs.createReadStream(this.filePath);
+        return fs.createReadStream(DEFAULT_PATH);
     }
 
     getVersion(): string {

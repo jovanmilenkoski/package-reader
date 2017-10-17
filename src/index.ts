@@ -1,2 +1,2 @@
 import { Reader } from "./reader";
-export = Reader;
+export = new Reader();
