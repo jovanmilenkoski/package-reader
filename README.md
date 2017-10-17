@@ -7,12 +7,12 @@ npm install package-reader --save
 ```
 import Package = require("package-reader");
 const version = Package.getVersion();
-console.lo(version);
+console.log(version);
 ```
 
 ### JavaScript
 ```
 var Package = require("package-reader");
 var version = Package.getVersion();
-console.lo(version);
+console.log(version);
 ```
