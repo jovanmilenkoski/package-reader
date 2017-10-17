@@ -1,0 +1,35 @@
+{
+  "name": "package-reader",
+  "version": "1.0.0",
+  "description": "Easier reading from package.json file",
+  "main": "dst/index.js",
+  "typings": "dst/index",
+  "files": [
+    "dst/"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dst/dst",
+    "test": "node dst/test.js",
+    "pretest": "npm run build",
+    "build": "./node_modules/.bin/tsc -p ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jovanmilenoski/package-reader.git"
+  },
+  "keywords": [
+    "nodejs",
+    "package.json",
+    "reader"
+  ],
+  "author": "jovanmilenkoski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jovanmilenoski/package-reader/issues"
+  },
+  "homepage": "https://github.com/jovanmilenoski/package-reader#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.41",
+    "typescript": "^2.5.3"
+  }
+}
