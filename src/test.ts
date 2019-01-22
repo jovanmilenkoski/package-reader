@@ -1,7 +1,10 @@
-import { Reader } from "./reader";
-import defaultReader from "./index";
+import { Reader } from "./index";
+import * as path from "path";
 
-const packageRead = new Reader(__dirname + '/../package.json');
+const packageJSONPath = path.join(__dirname, '../package.json');
+console.log(packageJSONPath);
+
+const packageRead = new Reader(packageJSONPath);
 
 const version = packageRead.getVersion();
 const name = packageRead.getName();

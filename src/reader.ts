@@ -20,12 +20,16 @@ export class Reader {
 
     private package: Package;
 
-    constructor(private filePath?: string) {
-        this.package = JSON.parse(fs.readFileSync(filePath || DEFAULT_PATH).toString());
+    constructor(private filePath: string = DEFAULT_PATH) {
+        try {
+            this.package = JSON.parse(fs.readFileSync(filePath).toString());
+        } catch (e) {
+            console.error(`unable to read file at location ${this.filePath}`);
+        }
     }
 
     getPackageStream() {
-        return fs.createReadStream(DEFAULT_PATH);
+        return fs.createReadStream(this.filePath);
     }
 
     getVersion(): string {
