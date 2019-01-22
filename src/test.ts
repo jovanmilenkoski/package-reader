@@ -1,4 +1,5 @@
 import { Reader } from "./reader";
+import defaultReader from "./index";
 
 const packageRead = new Reader(__dirname + '/../package.json');
 

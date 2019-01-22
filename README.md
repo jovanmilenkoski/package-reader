@@ -5,14 +5,16 @@ npm install package-reader --save
 
 ### Typescript
 ```
-import Package = require("package-reader");
-const version = Package.getVersion();
+import defaultReader from "./index";
+const version = defaultReader.getVersion();
 console.log(version);
 ```
 
-### JavaScript
+or 
+
 ```
-var Package = require("package-reader");
-var version = Package.getVersion();
+import { Reader } from "./reader";
+const reader = new Reader(<path to a package.json>);
+const version = reader.getVersion();
 console.log(version);
 ```

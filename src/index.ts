@@ -1,2 +1,3 @@
 import { Reader } from "./reader";
-export = new Reader();
+export default new Reader();
+export { Reader };
