@@ -1,6 +1,6 @@
 {
   "name": "package-reader",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Easier reading from package.json file",
   "main": "dst/index.js",
   "typings": "dst/index",
