@@ -24,7 +24,7 @@ export class Reader {
         try {
             this.package = JSON.parse(fs.readFileSync(filePath).toString());
         } catch (e) {
-            console.error(`unable to read file at location ${this.filePath}`);
+            throw new Error(`unable to read file at location ${this.filePath}`);
         }
     }
 

@@ -1,3 +1,1 @@
-import { Reader } from "./reader";
-export default new Reader();
-export { Reader };
+export { Reader } from "./reader";
